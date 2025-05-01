@@ -33,7 +33,7 @@ function Header({ toggleSidebar }) {
             className="nav-link text-white me-3" 
             onClick={(e) => {
               e.preventDefault();
-              navigate('/profile');
+              navigate('/profile/view'); // Navigate to the ViewProfile page
             }} 
             title={loggedInUser ? `Logged in as: ${loggedInUser}` : ''}
           >

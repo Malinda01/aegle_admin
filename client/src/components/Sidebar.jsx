@@ -26,38 +26,75 @@ const Sidebar = ({ isVisible }) => {
       <h4 className="text-primary text-center py-3 border-bottom">Aegle Admin</h4>
       <ul className="nav flex-column flex-grow-1">
         <li className="nav-item">
-          <NavLink to="/home" className="nav-link text-dark" activeClassName="active">
+          <NavLink
+            to="/home"
+            className={({ isActive }) => (isActive ? 'nav-link text-dark active' : 'nav-link text-dark')}
+          >
             Dashboard
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/profile/view" className="nav-link text-dark" activeClassName="active">
+          <NavLink
+            to="/profile/view"
+            className={({ isActive }) => (isActive ? 'nav-link text-dark active' : 'nav-link text-dark')}
+          >
             View Profile
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/doctors/manage" className="nav-link text-dark" activeClassName="active">
+          <NavLink
+            to="/doctors/manage"
+            className={({ isActive }) => (isActive ? 'nav-link text-dark active' : 'nav-link text-dark')}
+          >
             Manage Doctors
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/sponsors/manage" className="nav-link text-dark" activeClassName="active">
+          <NavLink
+            to="/sponsors/manage"
+            className={({ isActive }) => (isActive ? 'nav-link text-dark active' : 'nav-link text-dark')}
+          >
             Manage Sponsors
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/suppliers/manage" className="nav-link text-dark" activeClassName="active">
+          <NavLink
+            to="/suppliers/manage"
+            className={({ isActive }) => (isActive ? 'nav-link text-dark active' : 'nav-link text-dark')}
+          >
             Manage Suppliers
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/ads/monitor" className="nav-link text-dark" activeClassName="active">
+          <NavLink
+            to="/ads/monitor"
+            className={({ isActive }) => (isActive ? 'nav-link text-dark active' : 'nav-link text-dark')}
+          >
             Monitor Ads
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/analytics/system-stats" className="nav-link text-dark" activeClassName="active">
+          <NavLink
+            to="/analytics/system-stats"
+            className={({ isActive }) => (isActive ? 'nav-link text-dark active' : 'nav-link text-dark')}
+          >
             System Stats
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/payments/select"
+            className={({ isActive }) => (isActive ? 'nav-link text-dark active' : 'nav-link text-dark')}
+          >
+            Payments
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/commissions/pay"
+            className={({ isActive }) => (isActive ? 'nav-link text-dark active' : 'nav-link text-dark')}
+          >
+            Commissions
           </NavLink>
         </li>
       </ul>

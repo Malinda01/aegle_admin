@@ -1,33 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ViewProfile = () => {
-  const [profile, setProfile] = useState({
-    name: '',
-    email: '',
-    contact: '',
-    address: '',
-  });
+  const profileData = {
+    name: 'Admin Name',
+    email: 'admin@example.com',
+    role: 'Administrator',
+  };
 
-  useEffect(() => {
-    // Fetch profile data (replace with actual API call)
-    const fetchedProfile = {
-      name: 'John Doe',
-      email: 'john.doe@example.com',
-      contact: '123-456-7890',
-      address: '123 Main St, Springfield',
-    };
-    setProfile(fetchedProfile);
-  }, []);
+  const navigate = useNavigate();
+
+  const handleEdit = () => {
+    navigate('/profile/edit'); // Navigate to the edit profile page
+  };
 
   return (
     <div className="container mt-5">
       <h2>View Profile</h2>
-      <div className="card mt-3">
+      <div className="card mt-4">
         <div className="card-body">
-          <h5 className="card-title">Name: {profile.name}</h5>
-          <p className="card-text">Email: {profile.email}</p>
-          <p className="card-text">Contact: {profile.contact}</p>
-          <p className="card-text">Address: {profile.address}</p>
+          <h5 className="card-title">Profile Details</h5>
+          <p><strong>Name:</strong> {profileData.name}</p>
+          <p><strong>Email:</strong> {profileData.email}</p>
+          <p><strong>Role:</strong> {profileData.role}</p>
+          <button className="btn btn-primary mt-3" onClick={handleEdit}>
+            Edit
+          </button>
         </div>
       </div>
     </div>

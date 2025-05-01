@@ -19,6 +19,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   font-family: Arial, sans-serif;
+  min-height: 100%; /* Increase the minimum height to allow more scrolling */
 }
 
 /* App wrapper */
@@ -107,7 +108,7 @@ main {
   margin-left: 250px; /* Offset for the sidebar width */
   padding: 2rem;
   overflow-y: auto; /* Enable scrolling for the main content */
-  min-height: calc(100vh - 56px - 70px); /* Adjust for header and footer height */
+  min-height: calc(150vh - 56px - 70px); /* Increase the main content height for more scrolling */
   box-sizing: border-box; /* Include padding and border in height calculation */
 }
 
