@@ -1,0 +1,181 @@
+/* Root and body setup */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Stack header, main, and footer vertically */
+  height: 100%; /* Ensure consistent height with html */
+  overflow-y: auto; /* Enable scrolling for the entire page */
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9), /* Increased transparency for a stronger fade effect */
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("https://i.pinimg.com/736x/49/40/6f/49406f1fb7bf3769cb322f3ba2692732.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+/* App wrapper */
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Sidebar + content layout */
+.app {
+  display: flex;
+  flex: 1; /* Allow the main content to grow and fill available space */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  height: calc(100vh - 126px); /* Adjust height to fit between header and footer */
+  position: fixed;
+  top: 56px; /* Align with the bottom of the header */
+  left: 0;
+  z-index: 1050;
+  background-color: #f8f9fa;
+  border-right: 1px solid #ddd;
+  overflow-y: auto; /* Enable scrolling if content exceeds the viewport */
+  box-sizing: border-box; /* Include padding and border in height calculation */
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-lg-block {
+  display: block !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+/* Header and footer */
+header {
+  height: 56px; /* Fixed height for the header */
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+  width: 100%;
+  position: fixed; /* Ensure the header stays at the top */
+  top: 0;
+  left: 0;
+}
+
+footer {
+  height: 70px; /* Fixed height for the footer */
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  text-align: center;
+  padding: 1rem 0; /* Adjusted padding for better spacing */
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed; /* Ensure the footer stays at the bottom */
+  bottom: 0;
+  left: 0;
+}
+
+footer.footer {
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  margin-left: 250px; /* Offset for the sidebar width */
+  padding: 2rem;
+  overflow-y: auto; /* Enable scrolling for the main content */
+  min-height: calc(100vh - 56px - 70px); /* Adjust for header and footer height */
+  box-sizing: border-box; /* Include padding and border in height calculation */
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+h2 {
+  font-size: 2rem;
+  color: #4978aa;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+  color: #4978aa;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+h6 {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Welcome Page */
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: transparent;
+  text-align: center;
+}
+
+.welcome-page h1 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.welcome-page p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.welcome-page button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.welcome-page button:hover {
+  background-color: #0056b3;
+}
